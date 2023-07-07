@@ -23,7 +23,7 @@ function callApi(value) {
   addLoader();
   document.getElementById("headline").innerHTML =
     value === "all" ? "Top News" : value.toUpperCase();
-  fetch(`https://inshorts.deta.dev/news?category=${value}`)
+  fetch(`https://inshorts-news-api-henna.vercel.app/news?category=${value}`)
     .then((response) => {
       return response.json();
     })
